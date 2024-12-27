@@ -1,20 +1,36 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo para o body geral*/
+/* Estilo para o body geral */
 body {
     font-family: 'Courier New', Courier, monospace;
     color: #333;
     min-height: 100vh;
     background-image: url('https://images.unsplash.com/photo-1517438959426-a5e2ab747c99?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-position: center center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
 }
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Mantém o fundo cobrindo toda a área */
+        background-attachment: scroll; /* Permite que a imagem role junto com a página */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover; /* Garante que a imagem seja responsiva */
+        background-position: top center; /* Alinha melhor a imagem em telas muito pequenas */
+    }
+}
+
 
 header {
     position: fixed;
