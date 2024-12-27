@@ -325,35 +325,34 @@ header {
 /*index.html*/
 
 /* Dedicatória no canto inferior direito */
-
 .dedicatoria-texto {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 2rem;
     border-radius: 10px;
-    max-width: 500px; /* Ajusta o tamanho para caber melhor */
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    max-width: 700px; /* Aumenta para telas maiores */
+    font-size: 1.2rem; /* Fonte maior para computadores */
     color: #333;
     font-family: 'Courier New', Courier, monospace;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
-    bottom: 2rem; /* Ajusta a distância do fundo da tela */
-    right: 2rem; /* Ajusta a distância do lado direito */
+    bottom: 2rem; /* Ajuste fino da posição */
+    right: 2rem; 
     text-align: left;
 }
 
-/* Estilo para o card no canto inferior esquerdo */
+/* Ajuste para o card */
 .card-pixelart {
-    width: 280px; /* Ajuste fino do tamanho */
+    width: 300px; /* Define tamanho fixo para maior equilíbrio */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     background-color: #fff;
     text-align: center;
     position: fixed;
-    bottom: 2rem; /* Ajusta a distância do fundo da tela */
-    left: 2rem; /* Ajusta a distância do lado esquerdo */
+    bottom: 2rem;
+    left: 2rem;
 }
 
 /* Imagem dentro do card */
@@ -370,12 +369,25 @@ header {
     color: #333;
 }
 
-/* Media queries para diferentes tamanhos de tela */
+/* Responsividade para telas médias e grandes */
+@media (min-width: 1024px) {
+    .dedicatoria-texto {
+        max-width: 800px; /* Ajuste para telas maiores */
+        font-size: 1.4rem; /* Fonte proporcional */
+        padding: 2.5rem;
+    }
+
+    .card-pixelart {
+        width: 350px; /* Card maior para telas maiores */
+    }
+}
+
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .dedicatoria-texto {
         font-size: 1rem;
         padding: 1.5rem;
-        max-width: 80%;
+        max-width: 90%;
         bottom: 1.5rem;
         right: 1.5rem;
     }
@@ -391,7 +403,7 @@ header {
     .dedicatoria-texto {
         font-size: 0.9rem;
         padding: 1rem;
-        max-width: 90%;
+        max-width: 95%;
         bottom: 1rem;
         right: 1rem;
     }
@@ -402,5 +414,3 @@ header {
         left: 1rem;
     }
 }
-
-
