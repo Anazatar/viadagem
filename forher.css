@@ -310,33 +310,35 @@ header {
 
 /* Dedicatória no canto inferior direito */
 .dedicatoria-texto {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9); /* Leve transparência */
     padding: 20px;
     border-radius: 10px;
-    max-width: 90%; /* Ajusta automaticamente para telas menores */
-    font-size: 18px; /* Fonte menor para telas pequenas */
+    max-width: 90%; /* Ajusta largura para telas pequenas */
+    font-size: 18px;
     color: #333;
     font-family: 'Courier New', Courier, monospace;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px; /* Distância maior do fundo */
+    right: 20px; /* Distância maior do lado direito */
     text-align: left;
+    z-index: 10; /* Garante que fica sobreposto */
 }
 
 .card-pixelart {
-    width: 90%; /* Ajusta automaticamente para telas menores */
-    max-width: 300px; /* Limite para telas grandes */
+    width: 90%; /* Ajusta para ocupar até 90% da largura */
+    max-width: 300px; /* Define um limite máximo */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     background-color: #fff;
     text-align: center;
     position: fixed;
-    bottom: 10px;
-    left: 10px;
+    bottom: 20px; /* Distância do fundo */
+    left: 20px; /* Distância do lado esquerdo */
+    z-index: 10; /* Garante que fica sobreposto */
 }
 
 .card-pixelart img {
@@ -349,6 +351,7 @@ header {
     padding: 15px;
     font-family: 'Courier New', Courier, monospace;
     color: #333;
+    font-size: 16px;
 }
 
 /* Estilo responsivo para telas menores */
@@ -356,38 +359,40 @@ header {
     .dedicatoria-texto {
         padding: 15px;
         font-size: 16px;
-        bottom: 5px; /* Menor distância do fundo */
-        right: 5px;  /* Menor distância do lado direito */
+        bottom: 10px; /* Reduz distância do fundo */
+        right: 10px; /* Reduz distância do lado direito */
     }
 
     .card-pixelart {
-        width: 90%; /* Ocupa mais espaço em telas pequenas */
-        bottom: 5px;
-        left: 5px;
+        width: 90%;
+        max-width: 250px; /* Ajusta largura máxima */
+        bottom: 10px;
+        left: 10px;
     }
 
     .card-pixelart .card-content {
-        font-size: 14px; /* Reduz o tamanho da fonte em telas pequenas */
+        font-size: 14px;
     }
 }
 
 /* Estilo responsivo para telas muito pequenas */
 @media (max-width: 480px) {
     .dedicatoria-texto {
-        font-size: 14px; /* Fonte ainda menor para celulares */
+        font-size: 14px;
         padding: 10px;
         bottom: 5px;
         right: 5px;
     }
 
     .card-pixelart {
-        width: 100%; /* Ocupa toda a largura da tela */
+        width: 100%; /* Ocupa toda a largura */
+        max-width: none;
         bottom: 5px;
         left: 5px;
     }
 
     .card-pixelart .card-content {
-        font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+        font-size: 12px;
     }
 }
 
